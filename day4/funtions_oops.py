@@ -53,4 +53,15 @@ smartphone1.message()
 smartphone1.install_app("WhatsApp")
 smartphone1.take_photo()    
 
-    
+#JSON
+import json
+data={"name":"surendra","age":21,"city":"chennai"}
+with open("data.json","w") as f:
+    json_data=json.dumps(data)
+    f.write(json_data)
+with open("data.json","r") as f:
+    loads_data=json.load(f)
+    print(loads_data)
+print("Name:",loads_data["name"])
+print("Age:",loads_data["age"])
+print("City:",loads_data["city"])
